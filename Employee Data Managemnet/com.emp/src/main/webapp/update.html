@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    background: radial-gradient(circle, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+    background-size: 300% 300%;
+    animation: gradientAnimation 8s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Background gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Form container styling */
+form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    width: 300px;
+    animation: formZoom 1.5s infinite;
+}
+
+/* Form zoom animation */
+@keyframes formZoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px #ff6a95;
+}
+
+/* Button styling */
+button {
+    background: linear-gradient(45deg, #ff6a95, #ff9671, #ffc371);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.6);
+    transition: all 0.3s ease;
+    animation: buttonPulse 2s infinite;
+}
+
+/* Button hover effect */
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ffc371, #ff9671, #ff6a95);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.8);
+}
+
+/* Button active effect */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(255, 105, 180, 0.4);
+}
+
+/* Button pulse animation */
+@keyframes buttonPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+</style>
+<body>
+<form action="update">
+ID:<input type="text" name="id">
+NAME:<input type="text" name="name">
+AGE:<input type="text" name="age">
+EMAIL:<input type="text" name="email">
+SALARY:<input type="text" name="salary">
+<button type="submit" value="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff6a95, #fbc2eb, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+/* Background gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Form styling */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    animation: formRotate 3s infinite ease-in-out;
+}
+
+/* Form rotation animation */
+@keyframes formRotate {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(1deg); }
+}
+
+/* Input field styling */
+input[type="text"] {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff6a95;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: inset 0 6px 10px rgba(255, 105, 180, 0.3);
+}
+
+/* Button styling */
+button {
+    background: linear-gradient(45deg, #ff6a95, #ffc371);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    animation: buttonPulse 2s infinite;
+}
+
+/* Button hover effect */
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ffc371, #ff6a95);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.8);
+}
+
+/* Button active effect */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(255, 105, 180, 0.3);
+}
+
+/* Button pulse animation */
+@keyframes buttonPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+</style>
+<body>
+<form action="delete">
+ID:<input type="text" name="id">
+<button type="submit" name="delete">Delete</button>
+</form>
+</body>
+</html>

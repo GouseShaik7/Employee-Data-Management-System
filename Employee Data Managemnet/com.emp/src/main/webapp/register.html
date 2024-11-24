@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+    background-size: 500% 500%;
+    animation: gradientBG 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+}
+
+/* Gradient animation for the background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Form styling */
+form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;	
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: formBounce 2s infinite;
+}
+
+/* Bounce animation for the form */
+@keyframes formBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Input field styling */
+input[type="text"] {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff6a95;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+button {
+    background: linear-gradient(45deg, #ff6a95, #ff9671);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    margin-top: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff9671, #ff6a95);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.7);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(255, 105, 180, 0.3);
+}
+
+</style>
+<body>
+<form action="save">
+ID:<input type="text" name="id">
+NAME:<input type="text" name="name">
+AGE:<input type="text" name="age">
+EMAIL:<input type="text" name="email">
+SALARY:<input type="text" name="salary">
+<button type="submit" value="submit">Register</button>
+</form>
+</body>
+</html>
